@@ -26,7 +26,7 @@ class DrawIoExporterPlugin(mkdocs.plugins.BasePlugin):
         ('drawio_executable', config_options.Type(str)),
         ('drawio_args', config_options.Type(list, default=[])),
         ('format', config_options.Type(str, default='svg')),
-        ('image_re', config_options.Type(str, default='(<img[^>]+src=")([^">]+)("\s*\/?>)')),
+        ('image_re', config_options.Type(str, default='(<object[^>]+type="image\/svg\+xml"[^>]+data=")([^">]+)("\s*\/?><\/object>)')),
         ('sources', config_options.Type(str, default='*.drawio')),
     )
 
